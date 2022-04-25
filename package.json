@@ -4,9 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -20,6 +25,8 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "start": "node src/index.ts"
   }
 }
