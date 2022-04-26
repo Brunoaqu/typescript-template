@@ -4,16 +4,15 @@
         "project": "tsconfig.json",
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint/eslint-plugin", "@typescript-eslint"],
+    "plugins": ["@typescript-eslint/eslint-plugin", "@typescript-eslint", "prettier"],
     "extends": [
         "airbnb-base",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier",
         "plugin:import/typescript"
     ],
-    "root": true,
     "env": {
+        "es2021": true,
         "node": true,
         "jest": true
     },
